@@ -29,7 +29,6 @@ def api_predict():
         # 3. TimesNet 预测
         timesnet_df = predict_with_timesnet(date)
 
-        # 4. 分类只用 PatchTST 的预测结果做分类
         weather_classes, daily_weather, daily_prob = classify_prediction(patchtst_csv)
 
         # 定义要返回的字段，确保包含风速u10,v10，温度，湿度

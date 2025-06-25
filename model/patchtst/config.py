@@ -4,7 +4,7 @@ class Configs:
         self.task_name = 'long_term_forecast'
 
         self.seq_len = 96  # 输入长度：过去4天，每小时1条，共96小时
-        self.pred_len = 24  # 预测1天(24小时)，可改成48、72
+        self.pred_len = 24  
 
         self.d_model = 64
         self.n_heads = 4
@@ -19,5 +19,4 @@ class Configs:
         self.num_workers = 2
         self.device = torch.device("cpu")
 
-        # 你的气象字段（除时间外）
         self.features = ['u10', 'v10', 'd2m', 't2m', 'hcc', 'lcc', 'mcc', 'tp', 'ssr', 'sshf']

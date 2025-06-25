@@ -34,6 +34,5 @@ def load_weather_data(file_path, configs, split_ratio=0.8):
     train_loader = DataLoader(train_dataset, batch_size=configs.batch_size, shuffle=True, num_workers=configs.num_workers)
     test_loader = DataLoader(test_dataset, batch_size=configs.batch_size, shuffle=False, num_workers=configs.num_workers)
 
-    # 多返回 mean 和 std，用于反归一化
     return train_loader, test_loader, scaler
 
