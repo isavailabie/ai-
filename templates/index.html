@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>上海天气预测</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>上海天气预测</h1>
+    
+    <div class="input-group">
+      <label for="date">选择日期：</label>
+      <input type="date" id="date">
+      <button onclick="predict()">开始预测</button>
+    </div>
+    
+    <div id="weather-display">
+      <div id="weather-icon" class="weather-icon"></div>
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
